@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>SRI-v.1</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#id_search_text" ).autocomplete({
+            minLength: 1,
+            source: function(req, add){
+                var search_text= $("#id_search_text").val();
+                $.ajax({
+                    url: '/sri/search/',
+                    async: true,
+                    data_type: 'json',
+                    type: 'GET',
+                    data: {'terms': search_text},
+                    success: function(data){
+                        console.log(JSON.parse(data));
+                        add(JSON.parse(data))
+                        document.getElementById("noneResult").style.display= "None";
+                    },
+                    error: function(err){
+                        console.log('err: '+err);
+                    }
+                });
+            }
+        });
+    });
+  </script>
+</head>
+<body>
+    <h1>Image Recovery System</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="pure-control-group">
+            {{ form }}
+            <button class="pure-button">Search</button>
+        </div>
+    </form>
+
+    {% if is_image %}
+    <div id="noneResult">
+    <label>Type: image</label>
+    <fieldset>
+        {% for q in resultQueryImage %}
+            <ul style="float: left;">
+                <li>{{ q.search_text }}</li>  
+                {% if q.search_image %}
+                    <img src="{{ q.search_image.url }}" alt="no image" width="100" height="75">
+                {% endif %}    
+            </ul>    
+        {% endfor %}
+    </fieldset>
+    <label>Total images found: {{ total_query_images }}</label>
+    </div>
+    {% endif %}
+
+    {% if is_text %}
+    <div id="noneResult">
+    <label>Type: text</label>
+    <fieldset>
+        {% for q in resultQueryText %}
+            <ul style="float: left;">
+                <li>{{ q.object.search_text }}</li>  
+                {% if q.object.search_image %}
+                    <img src="{{ q.object.search_image.url }}" alt="no image" width="100" height="75">
+                {% endif %}
+            </ul>    
+        {% endfor %}
+    </fieldset>
+    <label>Total images found: {{ total_query_texts }}</label>
+    </div>
+    {% endif %}
+
+    {% if is_text_image %}
+    <div id="noneResult">
+    <label>Type: text and image</label>
+    <fieldset>
+        {% for q in resultQueryTextImage %}
+            <ul style="float: left;">
+                <li>{{ q.search_text }}</li>  
+                {% if q.search_image %}
+                    <img src="{{ q.search_image.url }}" alt="no image" width="100" height="75">
+                {% endif %}
+            </ul>    
+        {% endfor %}
+    </fieldset>
+    <label>Total images found: {{ total_query_text_image }}</label>
+    </div>
+    {% endif %}
+
+    {% if noneResult %}
+    <fieldset id="noneResult">
+        <label><i>No results found. Enter a text or insert a picture.</i></label>
+    </fieldset>
+    {% endif %}
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+*escolher 10 categorias para testes
+
+1-plant
+2-ground
+3-card
+4-home
+5-artist
+6-spide
+7-face

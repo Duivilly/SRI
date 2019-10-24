@@ -1,0 +1,43 @@
+<!doctype html>
+{% csrf_token %}
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autocomplete</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#terms" ).autocomplete({
+      minLength: 3,
+      source: function(req, add){
+        var search_text= $("#terms").val();
+        $.ajax({
+          url: '/sri/search/',
+          async: true,
+          data_type: 'json',
+          type: 'GET',
+          data: {'terms': search_text},
+          success: function(data){
+            console.log(JSON.parse(data));
+            add(JSON.parse(data))
+          },
+          error: function(err){
+            console.log('err: '+err);
+          }
+        });
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div class="ui-widget">
+  <label for="terms">terms: </label>
+  <input id="terms">
+</div>
+
+</body>
+</html>

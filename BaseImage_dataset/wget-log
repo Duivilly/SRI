@@ -1,0 +1,14 @@
+--2018-05-20 22:42:48--  https://c3.staticflickr.com/4/3860/14630351277_e0d5ec110e_z.jpg
+Resolving c3.staticflickr.com (c3.staticflickr.com)... 200.152.162.136, 200.152.162.137, 200.152.162.189, ...
+Connecting to c3.staticflickr.com (c3.staticflickr.com)|200.152.162.136|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 172714 (169K) [image/jpeg]
+Saving to: ‘14630351277_e0d5ec110e_z.jpg’
+
+     0K .......... .......... .......... .......... .......... 29%  176K 1s
+    50K .......... .......... .......... .......... .......... 59%  328K 0s
+   100K .......... .......... .......... .......... .......... 88%  298K 0s
+   150K .......... ........                                   100%  879K=0,6s
+
+2018-05-20 22:42:50 (270 KB/s) - ‘14630351277_e0d5ec110e_z.jpg’ saved [172714/172714]
+

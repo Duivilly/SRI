@@ -1,0 +1,98 @@
+Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+:tasks
+
+------------------------------------------------------------
+All tasks runnable from root project
+------------------------------------------------------------
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles main classes.
+clean - Deletes the build directory.
+jar - Assembles a jar archive containing the main classes.
+testClasses - Assembles test classes.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. [incubating]
+wrapper - Generates Gradle wrapper files. [incubating]
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the main source code.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'sri'.
+components - Displays the components produced by root project 'sri'. [incubating]
+dependencies - Displays all dependencies declared in root project 'sri'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'sri'.
+dependentComponents - Displays the dependent components of components in root project 'sri'. [incubating]
+help - Displays a help message.
+model - Displays the configuration model of root project 'sri'. [incubating]
+projects - Displays the sub-projects of root project 'sri'.
+properties - Displays the properties of root project 'sri'.
+tasks - Displays the tasks runnable from root project 'sri'.
+
+Verification tasks
+------------------
+check - Runs all checks.
+test - Runs the unit tests.
+
+Other tasks
+-----------
+runIndexing
+runIndexLocalSLocalFeat
+runSearch
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+
+To see all tasks and more detail, run gradlew tasks --all
+
+To see more detail about a task, run gradlew help --task <task>
+:compileJava
+:processResources UP-TO-DATE
+:classes
+:runSearch
+0.0: 	/home/ubuntu/sri/images/283696707_04235bf34e_z.jpg
+31.91611852178488: 	/home/ubuntu/sri/images/2446664733_2e8d900826_z.jpg
+32.163645176926735: 	/home/ubuntu/sri/images/5270678241_1011a5ec8e_z.jpg
+32.39221950564492: 	/home/ubuntu/sri/images/14842511281_bc2852e677_z.jpg
+32.54303950734092: 	/home/ubuntu/sri/images/7249275928_9908251932_z.jpg
+33.19812397008492: 	/home/ubuntu/sri/images/13972482549_544fb625fc_z.jpg
+33.308038170400806: 	/home/ubuntu/sri/images/2559611470_bc53764d4a_z.jpg
+33.78098849403942: 	/home/ubuntu/sri/images/164363152_342a756ed5_z.jpg
+33.78998511184493: 	/home/ubuntu/sri/images/4644402826_98f008ec3c_z.jpg
+33.79780769967256: 	/home/ubuntu/sri/images/5112730625_e605282e5b_z.jpg
+33.959899749373434: 	/home/ubuntu/sri/images/4199581196_6d16942eec_z.jpg
+34.74711704153573: 	/home/ubuntu/sri/images/15414391860_8c531b1571_z.jpg
+34.74933027171832: 	/home/ubuntu/sri/images/4037879989_bd38058975_z.jpg
+34.955668710518964: 	/home/ubuntu/sri/images/9093326540_e9184a3046_z.jpg
+35.06212530203307: 	/home/ubuntu/sri/images/17108176951_ef1d943274_z.jpg
+35.22324869035886: 	/home/ubuntu/sri/images/8691776397_7040819070_z.jpg
+35.322068242418: 	/home/ubuntu/sri/images/7944285904_f5654596c0_z.jpg
+35.55364254699221: 	/home/ubuntu/sri/images/5116642217_315b12f598_z.jpg
+35.79439232987653: 	/home/ubuntu/sri/images/13697970833_ee0ddc40d2_z.jpg
+35.8461411108965: 	/home/ubuntu/sri/images/11383570595_4746e5e5fd_z.jpg
+35.90126514654813: 	/home/ubuntu/sri/images/8019707309_7f4b1d4e13_z.jpg
+35.92540584971569: 	/home/ubuntu/sri/images/3989451121_4429bc185d_z.jpg
+35.9668817548241: 	/home/ubuntu/sri/images/15148503980_2c1f93b2a4_z.jpg
+35.98177903850238: 	/home/ubuntu/sri/images/153722939_e51c7f5109_z.jpg
+36.16938927693213: 	/home/ubuntu/sri/images/6107510669_46ae4f0603_z.jpg
+36.2130928052991: 	/home/ubuntu/sri/images/8684866995_97dca10b77_z.jpg
+36.250842796895824: 	/home/ubuntu/sri/images/2213392018_6605a0602c_z.jpg
+36.26569243003496: 	/home/ubuntu/sri/images/2173774492_2ba3ea1743_z.jpg
+36.27222523701595: 	/home/ubuntu/sri/images/16697532709_9d0229d6c5_z.jpg
+36.35547972082234: 	/home/ubuntu/sri/images/13124942564_9b2cf0f247_z.jpg
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 13.1 secs

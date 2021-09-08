@@ -1,16 +1,23 @@
-# SRI
+# SRI (Sistema de Recuperação de Imagens)
 
-* 1. python3 /BaseImage_dataset/obterBase.py -> (get dataset of images in csv(url, text))
-* 2. python3 /images/manageBase.py           -> update database
-* 3. python3 manage.py rebuild_index         -> indexing texts
+#### Get dataset of images in csv(url, text)
+```jsx 
+python3 /BaseImage_dataset/obterBase.py
+```
+#### Update database
+```jsx 
+python3 /images/manageBase.py
+```
+#### Indexing texts
+```jsx 
+python3 manage.py rebuild_index
+```
 
-# bic and bic_part are avaliable
-
-* 4. python3 runIndexing.py                  -> indexing with LIRE
-* 5. python3 runSearch.py                    -> export one query with to test (optional)
-
-# LIRE are avaliable now 
-
-* -text           -> ok
-* -image          -> ok
-* -text and image -> make tree (cerne)
+#### Indexing with LIRE (bic and bic_part are avaliable)
+```jsx 
+python3 runIndexing.py
+```
+#### Export one query with to test (optional)
+```jsx 
+python3 runSearch.py
+```
